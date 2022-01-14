@@ -12,4 +12,6 @@ public interface FeedingRepository extends CrudRepository<Feeding, Integer> {
     List<FeedingType> findAllFeedingTypes();
     Optional<Feeding> findById(int id);
     Feeding save(Feeding p);
+    @Query("SELECT ft FROM FeedingType ft WHERE ft.name LIKE ?1")
+    FeedingType findByName(String name);
 }

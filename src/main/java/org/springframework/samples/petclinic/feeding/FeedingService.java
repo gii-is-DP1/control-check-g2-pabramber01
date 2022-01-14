@@ -20,7 +20,7 @@ public class FeedingService {
     }
 
     public FeedingType getFeedingType(String typeName) {
-        return null;
+        return this.feedingRepository.findByName(typeName);
     }
 
     public Feeding save(Feeding p) throws UnfeasibleFeedingException {
