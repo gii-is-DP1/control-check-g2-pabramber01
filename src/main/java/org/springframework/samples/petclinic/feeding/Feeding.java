@@ -31,6 +31,9 @@ public class Feeding extends BaseEntity {
     
 	@NotNull
 	@ManyToOne(optional = false)
-    Pet pet;   
+    Pet pet;  
+	
+	@ManyToOne(optional = false)
+	FeedingType feedingType;
     
 }
